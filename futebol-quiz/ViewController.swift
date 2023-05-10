@@ -8,7 +8,7 @@
 import UIKit
 
 class ViewController: UIViewController {
-
+    
     @IBOutlet weak var perguntasLabel: UITextView!
     
     @IBOutlet weak var btnFalso: UIButton!
@@ -29,13 +29,18 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        perguntasLabel.text = "Pergunta 1"
-    }
-
-    @IBAction func actionBtn(_ sender: UIButton) {
-        
+        atualizarPerguntas()
     }
     
+    @IBAction func actionBtn(_ sender: UIButton) {
+        atualizarPerguntas()
+    }
+    
+    func atualizarPerguntas () {
+        var numQuestao : Int = 0
+        if (!quiz.isEmpty){
+            numQuestao = Int.random(in: 0...quiz.count)
+            perguntasLabel.text = quiz[numQuestao]
+        }
+    }
 }
-
