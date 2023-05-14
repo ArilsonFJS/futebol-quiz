@@ -14,6 +14,7 @@ class ViewController: UIViewController {
     @IBOutlet weak var btnFalso: UIButton!
     @IBOutlet weak var btnVerdadeiro: UIButton!
     
+    @IBOutlet weak var pontuacaoLabel: UILabel!
     @IBOutlet weak var progressBar: UIProgressView!
     
     var quizBrain = QuizBrain()
@@ -40,7 +41,7 @@ class ViewController: UIViewController {
         
         perguntasLabel.text = quizBrain.textoAtual()
         progressBar.progress = quizBrain.atualizaProgressBar()
-        
+        pontuacaoLabel.text = "Pontuação \(quizBrain.getPontuacao())"
         btnVerdadeiro.backgroundColor = UIColor.clear
         btnFalso.backgroundColor = UIColor.clear
         

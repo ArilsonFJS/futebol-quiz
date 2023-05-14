@@ -68,6 +68,13 @@
                                     <action selector="actionBtn:" destination="BYZ-38-t0r" eventType="touchUpInside" id="5sc-I2-4i9"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Pontuação" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tB1-p1-hAT">
+                                <rect key="frame" x="104" y="89" width="188" height="51"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="23"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" red="0.0403180411184468" green="0.50703436254980083" blue="0.14964121465245997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -76,6 +83,7 @@
                         <outlet property="btnFalso" destination="6KS-T0-pRG" id="kZc-Gz-eSR"/>
                         <outlet property="btnVerdadeiro" destination="a83-C6-ejQ" id="BFw-fJ-eRw"/>
                         <outlet property="perguntasLabel" destination="w62-Xr-45Z" id="KLf-T2-Wu2"/>
+                        <outlet property="pontuacaoLabel" destination="tB1-p1-hAT" id="RyX-ow-ajd"/>
                         <outlet property="progressBar" destination="ae7-qJ-Ofj" id="MmK-RJ-deS"/>
                     </connections>
                 </viewController>

@@ -21,13 +21,19 @@ struct QuizBrain {
     ]
     
     var numQuestao = 0
+    var pontuacao = 0
     
-    func checkResposta (_ respostaUser: String) -> Bool{
+    mutating func checkResposta (_ respostaUser: String) -> Bool{
         if respostaUser == quiz[numQuestao].resposta {
+            pontuacao += 1
             return true
         }else{
             return false
         }
+    }
+    
+    func getPontuacao () -> Int {
+        return pontuacao
     }
     
     func textoAtual () -> String {
@@ -35,7 +41,7 @@ struct QuizBrain {
         var perguntaAtual = ""
         
         if !quiz.isEmpty {
-           let perguntaAtual = quiz[numQuestao].texto
+           perguntaAtual = quiz[numQuestao].texto
         }
         return perguntaAtual
     }
@@ -53,6 +59,7 @@ struct QuizBrain {
             
         } else{
             numQuestao = 0
+            pontuacao = 0
         }
     }
 }
